@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About - Kullai Metikala">
+  <div class="container mx-auto px-4 py-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="cyber-panel mb-12">
+        <h1 class="glitch-text text-4xl md:text-6xl font-bold mb-8">About_Me.exe</h1>
+        <div class="matrix-text text-xl leading-relaxed space-y-6">
+          <p class="typing-effect">
+            I am a dedicated security researcher and bug bounty hunter with a proven track record in uncovering critical vulnerabilities. 
+            With extensive experience in penetration testing and security assessments, I've helped secure numerous high-profile applications and networks.
+          </p>
+          
+          <div class="stats-grid mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="stat-card">
+              <div class="text-4xl font-bold text-cyber-blue">150+</div>
+              <div class="text-sm mt-2">Vulnerabilities Found</div>
+            </div>
+            <div class="stat-card">
+              <div class="text-4xl font-bold text-cyber-red">$100K+</div>
+              <div class="text-sm mt-2">Bug Bounties Earned</div>
+            </div>
+            <div class="stat-card">
+              <div class="text-4xl font-bold text-cyber-green">50+</div>
+              <div class="text-sm mt-2">CVEs Credited</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cyber-panel">
+        <h2 class="text-3xl font-bold mb-6 text-cyber-blue">Arsenal</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="tool-card">
+            <h3 class="text-xl font-bold mb-3">Offensive Tools</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <span class="text-cyber-red mr-2">⚡</span>
+                Burp Suite Professional
+              </li>
+              <li class="flex items-center">
+                <span class="text-cyber-red mr-2">⚡</span>
+                Metasploit Framework
+              </li>
+              <li class="flex items-center">
+                <span class="text-cyber-red mr-2">⚡</span>
+                Custom Exploitation Tools
+              </li>
+            </ul>
+          </div>
+          
+          <div class="tool-card">
+            <h3 class="text-xl font-bold mb-3">Analysis Tools</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <span class="text-cyber-blue mr-2">🔍</span>
+                IDA Pro
+              </li>
+              <li class="flex items-center">
+                <span class="text-cyber-blue mr-2">🔍</span>
+                Ghidra
+              </li>
+              <li class="flex items-center">
+                <span class="text-cyber-blue mr-2">🔍</span>
+                WireShark
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .cyber-panel {
+      @apply p-8 rounded-lg border border-cyber-green/20 bg-cyber-black/50 backdrop-blur-sm mb-8;
+    }
+
+    .stat-card {
+      @apply p-6 rounded-lg border border-cyber-green/20 bg-cyber-black/80
+             transform transition-all duration-300 hover:border-cyber-blue/50
+             text-center;
+    }
+
+    .tool-card {
+      @apply p-6 rounded-lg border border-cyber-green/20 bg-cyber-black/80
+             transform transition-all duration-300 hover:border-cyber-red/50;
+    }
+
+    .typing-effect {
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .matrix-text {
+      text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+  </style>
+</Layout>

@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Kullai Metikala - Security Researcher">
+  <div class="container mx-auto px-4 py-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="terminal-window mb-12">
+        <div id="typed-output" class="text-3xl md:text-5xl font-bold mb-8"></div>
+        <div class="text-xl text-cyber-blue/80 mb-12" id="subtitle"></div>
+        
+        <div class="cyber-card mt-8">
+          <div class="flex items-center space-x-6 mb-8">
+            <div class="w-32 h-32 rounded-full border-2 border-cyber-green overflow-hidden">
+              <img 
+                src="/avatar.jpg" 
+                alt="Kullai Metikala"
+                class="w-full h-full object-cover"
+                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'128\' height=\'128\'%3E%3Crect width=\'128\' height=\'128\' fill=\'%23000\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%2300ff00\' font-size=\'40\' font-family=\'monospace\'%3EKM%3C/text%3E%3C/svg%3E'"
+              />
+            </div>
+            <div>
+              <h1 class="text-2xl md:text-4xl font-bold mb-2">Kullai Metikala</h1>
+              <p class="text-cyber-blue/80">Security Researcher & Bug Bounty Hunter</p>
+              <div class="flex space-x-4 mt-4">
+                <a href="https://github.com/kullaisec" class="cyber-link-small">GitHub</a>
+                <a href="https://kullaisec.medium.com" class="cyber-link-small">Blog</a>
+                <a href="/about" class="cyber-link-small">About Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cyber-card mt-8">
+          <h2 class="text-2xl font-bold mb-6">Recent Blog Posts</h2>
+          <div class="space-y-6">
+            <article class="blog-card">
+              <h3 class="text-xl font-bold mb-2">
+                <a href="https://kullaisec.medium.com/how-i-found-stored-xss-via-pdf-file-upload-5a8f7c716e11" class="hover:text-cyber-blue">
+                  How I Found Stored XSS via PDF File Upload
+                </a>
+              </h3>
+              <p class="text-cyber-green/70 mb-2">A detailed walkthrough of discovering and exploiting a stored XSS vulnerability in a file upload system.</p>
+              <div class="flex items-center text-sm text-cyber-blue/60">
+                <span>Apr 15, 2024</span>
+                <span class="mx-2">•</span>
+                <span>Web Security</span>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <h3 class="text-xl font-bold mb-2">
+                <a href="https://kullaisec.medium.com/how-i-found-blind-ssrf-which-leads-to-aws-metadata-access-12cce6f4f4c1" class="hover:text-cyber-blue">
+                  Blind SSRF Leading to AWS Metadata Access
+                </a>
+              </h3>
+              <p class="text-cyber-green/70 mb-2">Exploring a critical SSRF vulnerability that allowed access to sensitive AWS metadata.</p>
+              <div class="flex items-center text-sm text-cyber-blue/60">
+                <span>Apr 10, 2024</span>
+                <span class="mx-2">•</span>
+                <span>Cloud Security</span>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <h3 class="text-xl font-bold mb-2">
+                <a href="https://kullaisec.medium.com/how-i-found-account-takeover-via-response-manipulation-worth-1000-ea6ebebd9d29" class="hover:text-cyber-blue">
+                  Account Takeover via Response Manipulation
+                </a>
+              </h3>
+              <p class="text-cyber-green/70 mb-2">A case study of discovering and reporting an account takeover vulnerability worth $1000.</p>
+              <div class="flex items-center text-sm text-cyber-blue/60">
+                <span>Apr 5, 2024</span>
+                <span class="mx-2">•</span>
+                <span>Authentication Bypass</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    import Typed from 'typed.js';
+    
+    new Typed('#typed-output', {
+      strings: ['> Kullai Metikala^1000', '> Security Researcher^1000', '> Bug Bounty Hunter^1000'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+
+    new Typed('#subtitle', {
+      strings: ['Breaking systems to make them stronger...'],
+      typeSpeed: 40,
+      startDelay: 1000,
+      showCursor: false
+    });
+  </script>
+
+  <style>
+    .terminal-window {
+      @apply p-8 rounded-lg border border-cyber-green/20 bg-cyber-black/50 backdrop-blur-sm;
+    }
+
+    .cyber-card {
+      @apply p-6 rounded-lg border border-cyber-green/20 bg-cyber-black/80 backdrop-blur-sm
+             transform transition-all duration-300 hover:border-cyber-blue/50 hover:shadow-lg
+             hover:shadow-cyber-blue/20;
+    }
+
+    .cyber-link-small {
+      @apply px-3 py-1 text-sm rounded border border-cyber-green/20 hover:border-cyber-blue/50
+             hover:text-cyber-blue transition-all duration-300;
+    }
+
+    .blog-card {
+      @apply p-4 rounded border border-cyber-green/10 hover:border-cyber-blue/30
+             transition-all duration-300;
+    }
+
+    .blog-card:hover {
+      @apply bg-cyber-black/40;
+      transform: translateX(8px);
+    }
+  </style>
+</Layout>
